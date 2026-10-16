@@ -1,0 +1,45 @@
+{
+  "run_name": "lora_r8",
+  "config": {
+    "run_name": "lora_r8",
+    "model_name": "facebook/nllb-200-distilled-1.3B",
+    "src_lang": "eng_Latn",
+    "tgt_lang": "tam_Taml",
+    "adaptation": "lora",
+    "lora": {
+      "r": 8,
+      "alpha": 16,
+      "dropout": 0.05,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "out_proj"
+      ]
+    },
+    "train_file": "data/processed/train.jsonl",
+    "valid_file": "data/processed/valid.jsonl",
+    "output_dir": "outputs/lora_r8",
+    "train_fraction": 1.0,
+    "seed": 42,
+    "max_len": 256,
+    "lr": 0.0001,
+    "epochs": 1,
+    "per_device_batch": 16,
+    "grad_accum": 2,
+    "bf16": true,
+    "eval_steps": 2000,
+    "valid_samples": 4000,
+    "logging_steps": 50,
+    "group_by_length": true
+  },
+  "params": {
+    "trainable": 4718592,
+    "total": 1375356928,
+    "pct": 0.3430812688646303
+  },
+  "train_seconds": 7147.511831998825,
+  "peak_gpu_mem_gb": 32.811766784,
+  "train_examples": 634920,
+  "best_checkpoint": "outputs/lora_r8/checkpoint-19842"
+}

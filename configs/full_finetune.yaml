@@ -1,0 +1,20 @@
+run_name: full_ft
+model_name: facebook/nllb-200-distilled-600M   # 1.3B full FT also fits on 48GB with small batch; keep 600M for a clean reference
+src_lang: eng_Latn
+tgt_lang: tam_Taml
+adaptation: full
+train_file: data/processed/train.jsonl
+valid_file: data/processed/valid.jsonl
+output_dir: outputs/full_ft
+train_fraction: 1.0
+seed: 42
+max_len: 256
+lr: 2.0e-5               # full FT needs a much lower LR than LoRA
+epochs: 1
+per_device_batch: 8
+grad_accum: 4
+bf16: true
+eval_steps: 2000
+valid_samples: 4000      # fixed random validation subset for periodic eval (never test)
+logging_steps: 50
+group_by_length: true    # batch similar-length sentences together (less padding => faster)

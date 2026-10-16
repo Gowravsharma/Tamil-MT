@@ -1,0 +1,9 @@
+run_name: baseline
+model_name: facebook/nllb-200-distilled-1.3B
+adapter_path: null        # null = pretrained model, no adaptation (E0)
+src_lang: eng_Latn
+tgt_lang: tam_Taml
+num_beams: 5
+max_new_tokens: 256
+batch_size: 32
+bf16: true

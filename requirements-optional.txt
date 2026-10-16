@@ -1,0 +1,2 @@
+# Optional: COMET scoring. Not installed for the reported results: with the other pins it triggers pip "ResolutionTooDeep".
+unbabel-comet>=2.2

@@ -1,0 +1,8 @@
+{
+  "bleu": 6.422344027823578,
+  "chrf++": 44.586119752072676,
+  "sacrebleu_signature": {
+    "bleu": "nrefs:1|case:mixed|eff:no|tok:none|smooth:exp|version:2.6.0",
+    "chrf": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0"
+  }
+}

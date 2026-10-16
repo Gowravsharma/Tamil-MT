@@ -1,0 +1,19 @@
+{
+  "n": 78751,
+  "rates": {
+    "possible_addition_or_repetition": 0.002044418483574812,
+    "number_mismatch": 0.004876128557097688,
+    "repetition_loop": 0.00015237901740930274,
+    "untranslated_or_latin": 0.0004698353036786834,
+    "possible_omission": 0.0003047580348186055,
+    "copied_source": 3.8094754352325686e-05
+  },
+  "counts": {
+    "possible_addition_or_repetition": 161,
+    "number_mismatch": 384,
+    "repetition_loop": 12,
+    "untranslated_or_latin": 37,
+    "possible_omission": 24,
+    "copied_source": 3
+  }
+}

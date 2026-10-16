@@ -1,0 +1,26 @@
+run_name: lora_r8_f25
+model_name: facebook/nllb-200-distilled-1.3B
+src_lang: eng_Latn
+tgt_lang: tam_Taml
+adaptation: lora          # lora | full
+lora:
+  r: 8
+  alpha: 16
+  dropout: 0.05
+  # NLLB (M2M100 arch) attention projections, incl. cross-attention (encoder_attn.*)
+  target_modules: [q_proj, k_proj, v_proj, out_proj]
+train_file: data/processed/train.jsonl
+valid_file: data/processed/valid.jsonl
+output_dir: outputs/lora_r8_f25
+train_fraction: 0.25
+seed: 42
+max_len: 256
+lr: 1.0e-4
+epochs: 1
+per_device_batch: 16
+grad_accum: 2             # effective batch 32
+bf16: true
+eval_steps: 500
+valid_samples: 4000      # fixed random validation subset for periodic eval (never test)
+logging_steps: 50
+group_by_length: true    # batch similar-length sentences together (less padding => faster)

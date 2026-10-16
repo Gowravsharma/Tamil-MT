@@ -1,0 +1,25 @@
+# Smoke test only: 500 train / 200 valid examples, 1 epoch. Same LoRA settings as lora_r8.yaml.
+run_name: smoke_lora_r8
+model_name: facebook/nllb-200-distilled-1.3B
+src_lang: eng_Latn
+tgt_lang: tam_Taml
+adaptation: lora
+lora:
+  r: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, out_proj]
+train_file: data/interim/smoke_train_500.jsonl
+valid_file: data/interim/smoke_valid_200.jsonl
+output_dir: outputs/smoke_lora_r8
+train_fraction: 1.0
+seed: 42
+max_len: 256
+lr: 1.0e-4
+epochs: 1
+per_device_batch: 16
+grad_accum: 2
+bf16: true
+eval_steps: 4
+logging_steps: 1
+group_by_length: true

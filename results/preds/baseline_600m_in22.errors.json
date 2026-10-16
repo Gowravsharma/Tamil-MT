@@ -1,0 +1,15 @@
+{
+  "n": 1024,
+  "rates": {
+    "number_mismatch": 0.0166015625,
+    "possible_addition_or_repetition": 0.001953125,
+    "possible_omission": 0.00390625,
+    "untranslated_or_latin": 0.0009765625
+  },
+  "counts": {
+    "number_mismatch": 17,
+    "possible_addition_or_repetition": 2,
+    "possible_omission": 4,
+    "untranslated_or_latin": 1
+  }
+}

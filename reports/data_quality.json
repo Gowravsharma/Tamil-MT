@@ -1,0 +1,10 @@
+{
+  "raw_pairs": 831177,
+  "removed_empty": 5,
+  "removed_exact_duplicates": 27161,
+  "conflicting_sources_flagged": 4035,
+  "removed_length_or_ratio": 2164,
+  "removed_target_not_tamil": 9446,
+  "removed_source_equals_target": 0,
+  "clean_pairs": 792401
+}

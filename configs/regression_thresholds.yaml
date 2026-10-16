@@ -1,0 +1,10 @@
+# Set BEFORE looking at final test results.
+# max_drop: largest tolerated absolute chrF++ drop vs. the previous release, per test set.
+# min_gain: required improvement on the in-domain set for the release to pass.
+test_sets:
+  domain:  {max_drop: 0.0, min_gain: 1.0}
+  general: {max_drop: 1.0, min_gain: 0.0}
+checks:
+  max_untranslated_rate: 0.02     # target mostly Latin script
+  max_number_mismatch_rate: 0.05  # digits in source missing from output
+  max_latin_ratio: 0.30

@@ -1,0 +1,13 @@
+# data, weights and caches are never committed (licences; size)
+data/
+outputs/
+logs/
+.hf_cache/
+.venv/
+__pycache__/
+.pytest_cache/
+*.safetensors
+*.bin
+*.pt
+*.ckpt
+.env
